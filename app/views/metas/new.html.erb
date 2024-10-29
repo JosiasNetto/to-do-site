@@ -1,0 +1,6 @@
+<%= form_with model: [@todo, @meta], url: todo_metas_path(@todo), method: :post do |form| %>
+    <%= form.text_field :nome %>
+    <%= form.hidden_field :completed, value: false %>
+    <%= form.submit "Create Meta" %>
+<% end %>
+  
