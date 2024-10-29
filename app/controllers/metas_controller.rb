@@ -2,7 +2,7 @@ class MetasController < ApplicationController
     before_action :set_todo
 
     def index
-        @meta = Meta.all
+        @metas = @todo.metas
     end
     
     def show
@@ -24,12 +24,23 @@ class MetasController < ApplicationController
     end
     
     def edit
+        @meta = @todo.metas.find(params[:id])
     end
 
     def update
+        @meta = @todo.metas.find(params[:id])
+
+        if @meta.update(meta_params)
+            redirect_to todo_metas_path, notice: "To-do atualizado com sucesso!"
+        else
+            render :edit
+        end
     end
     
     def destroy
+        @meta = @todo.metas.find(params[:id])
+        @meta.destroy
+        redirect_to todo_metas_path(@todo), notice: "To-do apagado com sucesso!"
     end
     
     private

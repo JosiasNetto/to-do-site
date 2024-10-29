@@ -1,0 +1,21 @@
+<h1>Lista Metas</h1>
+<%= link_to 'Nova Meta', new_todo_meta_path(@todo)%>
+<% if @metas.any? %>
+    <ul>
+        <% @metas.each do |meta|%>
+            <li>
+                <strong><%=meta.nome%></strong>
+                <p>Status: <%= meta.completed ? "Completed" : "Not Completed" %></p>
+                <%= form_with(model: [@todo, meta], url: todo_meta_path(@todo, meta), method: :delete) do |f| %>
+                    <%= f.submit 'Apagar', data: { confirm: 'Tem certeza que deseja apagar este to-do?' } %>
+                    <% end %>
+                    <%= link_to 'Editar', edit_todo_meta_path(@todo, meta), class: 'btn btn-primary' %>
+
+                    
+            </li>
+            <% end %>
+    </ul>
+<% else %>
+    <p>Nenhuma Meta encontrado.</p>
+<% end %>
+<%= link_to 'Voltar para Todos', todos_path %>

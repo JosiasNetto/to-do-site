@@ -1,0 +1,8 @@
+<%= form_with(model: @todo, local: true) do |form| %>
+    <%= form.text_field :title %>
+    <%= form.hidden_field :completed, value: false %>
+    <%= form.submit "Salvar mudanças" %>
+<% end %>
+
+<%= link_to 'Voltar', todos_path %>
+  
