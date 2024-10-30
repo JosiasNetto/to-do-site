@@ -22,8 +22,8 @@ Siga as instruções abaixo para instalar, configurar e executar o projeto em se
 1. Clonar o Repositório
 Clone o repositório para o seu diretório local:
 
-* git clone https://github.com/JosiasNetto/to-do-site.git
-* cd to-do-site
+``` git clone https://github.com/JosiasNetto/to-do-site.git```
+ ```cd to-do-site```
 
 2. Instalar Dependências
 Instale as dependências do projeto usando o Bundler:
