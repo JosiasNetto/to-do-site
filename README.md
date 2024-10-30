@@ -23,22 +23,22 @@ Siga as instruções abaixo para instalar, configurar e executar o projeto em se
 Clone o repositório para o seu diretório local:
 
 ``` git clone https://github.com/JosiasNetto/to-do-site.git```
- ```cd to-do-site```
+```cd to-do-site```
 
 2. Instalar Dependências
 Instale as dependências do projeto usando o Bundler:
 
-* bundle install
+```bundle install```
 
 3. Configurar o Banco de Dados
 
-* rails db:create
-* rails db:migrate
+``` rails db:create```
+``` rails db:migrate```
 
 4. Executar o Servidor Local
 Inicie o servidor Rails para visualizar o projeto em um navegador:
 
-* rails server
+```rails server```
 * Abra o navegador e acesse http://localhost:3000 para ver o aplicativo.
 
 ## Configuração do Ambiente de Desenvolvimento
