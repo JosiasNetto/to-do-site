@@ -1,8 +1,17 @@
-<%= form_with(model: @todo, local: true) do |form| %>
-    <%= form.text_field :title %>
-    <%= form.hidden_field :completed, value: false %>
-    <%= form.submit "Salvar mudanças" %>
+<div class="content">
+<%= form_with(model: @todo, local: true, class: "form-class") do |form| %>
+    <div class="inputs">
+    <div class="input">
+    <%= form.label "Título:" %>
+    <%= form.text_field :title, class: "input-bar" %>
+    </div>
+    <div class="input">
+    <%= form.label "Descrição:" %>
+    <%= form.text_field :descricao, class: "input-bar" %>
+    </div>
+    <%= form.submit "Salvar mudanças", class: 'btn btn-primary' %>
+    </div>
 <% end %>
 
-<%= link_to 'Voltar', todos_path %>
-  
+<%= link_to 'Cancelar', todos_path,class: 'btn btn-secondary', id: 'cancelar-lista' %>
+</div>

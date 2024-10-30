@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_29_015924) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_30_015640) do
   create_table "meta", force: :cascade do |t|
     t.string "nome"
     t.integer "todo_id"
@@ -21,8 +21,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_29_015924) do
 
   create_table "todos", force: :cascade do |t|
     t.string "title"
-    t.boolean "completed"
+    t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "completed"
   end
 end

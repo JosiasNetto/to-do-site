@@ -1,8 +1,12 @@
-<%= form_with(model: [@todo, @meta], url: todo_meta_path(@todo, @meta), local: true) do |form| %>
-    <%= form.text_field :nome %>
-    <%= form.hidden_field :completed, value: false %>
-    <%= form.submit "Salvar mudanças" %>
+<div class="content">
+<%= form_with(model: [@todo, @meta], url: todo_meta_path(@todo, @meta), local: true, class: "form-class") do |form| %>
+    <div class="input">
+    <%= form.label "Nome:" %>
+    <%= form.text_field :nome, class: "input-bar" %>
+    </div>
+    <%= form.submit "Salvar mudanças", class: 'btn btn-primary' %>
 <% end %>
 
-<%= link_to 'Voltar', todo_metas_path(@todo, @metas) %>
+<%= link_to 'Cancelar', todo_metas_path(@todo, @metas), class: 'btn btn-secondary', id: 'cancelar-lista' %>
+</div>
   

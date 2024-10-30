@@ -12,4 +12,241 @@
  *
  *= require_tree .
  *= require_self
+ *= require header
  */
+
+
+ 
+:root {
+    font-size: 8px;
+}
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+header {
+    display: flex;
+    padding: 40px;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--neutrals-100, #E7E7E7);
+    background: var(--pure-white, #FFF);
+}
+
+.logo {
+    width: 125.33px;
+    height: 39px;
+}
+
+.caixa-centro {
+    display: flex;
+    width: 597px;
+    padding: 28px;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    margin: 0 auto;
+    margin-top: 10rem;
+
+    border-radius: 8px;
+    background: var(--pure-white, #FFF);
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+}
+
+.caixa-titulo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+}
+
+.titulo {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+
+.lists {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+}
+
+.actions {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+
+}
+
+.action-metas {
+    display: flex;
+    padding: 8px 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex: 1 0 0;
+    align-self: stretch;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #913FDE;
+    color: white;
+    text-align: center;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-primary {
+    background-color: #A65FEC;
+}
+
+.btn-secondary {
+    color: #913FDE;
+    background-color: #FFF;
+    border-radius: 4px;
+    border: 1px solid #913FDE
+}
+
+.btn:hover {
+    background-color: #913FDE;
+}
+
+.btn-secondary:hover {
+    background-color: #E9D8FC;
+}
+
+#cancelar-lista {
+    width: 97%;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+
+.und-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+.list-item {
+    width: 100%;
+    display: flex;
+    padding: 12px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FAF6FE;
+    border-radius: 4px;
+
+}
+
+.list-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    font-size: 14px;
+}
+
+.todo-title{
+    font-size: 18px;
+    color: inherit;          
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+}
+
+.list-meta-titulo-checkbox {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 8px;
+    flex: 1 0 0;
+    font-size: 14px;
+}
+
+.lista-nada {
+    font-size: 14px;
+    margin: 0 auto;
+}
+
+.form-class {
+    display: flex;
+    gap: 14px;
+    flex-direction: column;
+    width: 100%;
+}
+
+.inputs {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+    font-size: 14px;
+}
+
+.input-bar {
+    display: flex;
+    padding: 9.5px 10px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border: 1px solid #6D6D6D;
+    border-radius: 4px;
+
+}
+
+
+
+
+

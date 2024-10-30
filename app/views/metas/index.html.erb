@@ -1,21 +1,30 @@
-<h1>Lista Metas</h1>
-<%= link_to 'Nova Meta', new_todo_meta_path(@todo)%>
+<div class="caixa-titulo"><h1 class="titulo"><%= @todo.title %></h1></div>
+
+<div class="content">
+<div class="action-metas">
+<%= link_to 'Voltar', todos_path, class: 'btn btn-secondary' %>
+<%= link_to 'Criar uma nova tarefa', new_todo_meta_path(@todo), class: 'btn btn-primary'%>
+</div>
 <% if @metas.any? %>
-    <ul>
+    <ul class="und-list">
         <% @metas.each do |meta|%>
-            <li>
+            <li class="list-item">
+            <div class="list-meta-titulo-checkbox">
+                <%= form_with(model: [@todo, meta], url: todo_meta_path(@todo, meta), local: true,  method: :patch) do |form| %>
+                    <%= form.check_box :completed, { checked: meta.completed, onchange: "this.form.submit();" } %>
+                <% end %>
                 <strong><%=meta.nome%></strong>
-                <p>Status: <%= meta.completed ? "Completed" : "Not Completed" %></p>
+            </div>
                 <%= form_with(model: [@todo, meta], url: todo_meta_path(@todo, meta), method: :delete) do |f| %>
                     <%= f.submit 'Apagar', data: { confirm: 'Tem certeza que deseja apagar este to-do?' } %>
                     <% end %>
                     <%= link_to 'Editar', edit_todo_meta_path(@todo, meta), class: 'btn btn-primary' %>
-
+                
                     
             </li>
             <% end %>
     </ul>
 <% else %>
-    <p>Nenhuma Meta encontrado.</p>
+    <p class="lista-nada">Nenhuma Meta encontrado.</p>
 <% end %>
-<%= link_to 'Voltar para Todos', todos_path %>
+</div>
