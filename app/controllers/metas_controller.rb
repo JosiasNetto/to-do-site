@@ -4,10 +4,10 @@ class MetasController < ApplicationController
     def index
         @metas = @todo.metas
     end
-    
+
     def show
     end
-    
+
     def new
         @meta = @todo.metas.build
     end
@@ -17,12 +17,12 @@ class MetasController < ApplicationController
 
         if @meta.save
             redirect_to todo_metas_path(@todo)
-            
+
         else
             render :new
         end
     end
-    
+
     def edit
         @meta = @todo.metas.find(params[:id])
     end
@@ -36,13 +36,13 @@ class MetasController < ApplicationController
             render :edit
         end
     end
-    
+
     def destroy
         @meta = @todo.metas.find(params[:id])
         @meta.destroy
         redirect_to todo_metas_path(@todo), notice: "To-do apagado com sucesso!"
     end
-    
+
     private
 
     def meta_params
@@ -52,5 +52,4 @@ class MetasController < ApplicationController
     def set_todo
         @todo = Todo.find(params[:todo_id])
       end
-
 end
