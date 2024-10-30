@@ -2,7 +2,7 @@
 
 <div class="content">
 <div class="action-metas">
-<%= link_to 'Voltar', todos_path, class: 'btn btn-secondary' %>
+<%= link_to 'Voltar', todos_path, class: 'btn btn-secondary', id: 'voltar' %>
 <%= link_to 'Criar uma nova tarefa', new_todo_meta_path(@todo), class: 'btn btn-primary'%>
 </div>
 <% if @metas.any? %>
@@ -16,7 +16,7 @@
                 <strong><%=meta.nome%></strong>
             </div>
                 <%= form_with(model: [@todo, meta], url: todo_meta_path(@todo, meta), method: :delete) do |f| %>
-                    <%= f.submit 'Apagar', data: { confirm: 'Tem certeza que deseja apagar este to-do?' } %>
+                    <%= f.submit 'Apagar', data: { confirm: 'Tem certeza que deseja apagar este to-do?' }, class: 'btn btn-primary' %>
                     <% end %>
                     <%= link_to 'Editar', edit_todo_meta_path(@todo, meta), class: 'btn btn-primary' %>
                 
@@ -25,6 +25,6 @@
             <% end %>
     </ul>
 <% else %>
-    <p class="lista-nada">Nenhuma Meta encontrado.</p>
+    <p class="lista-nada">Nenhuma tarefa encontrada.</p>
 <% end %>
 </div>
