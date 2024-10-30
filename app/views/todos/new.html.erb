@@ -1,4 +1,15 @@
 <div class="content">
+<% if @todo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@todo.errors.count, "erro") %> impediu que esta meta fosse salva:</h2>
+
+      <ul>
+      <% @todo.errors.full_messages.each do |msg| %>
+        <li class="error-msg"><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <%= form_with model: @todo, url: todos_path, method: :post, class: "form-class" do |form| %>
     <div class="inputs">
     <div class="input">

@@ -102,6 +102,7 @@ header {
 
 }
 
+
 .action-metas {
     display: flex;
     padding: 8px 12px;
@@ -153,6 +154,29 @@ header {
 #voltar {
     width: 28%;
 }
+
+  
+  .field_with_errors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    align-self: stretch;
+    font-size: 14px;
+
+  }
+
+  .field_with_errors input{
+    display: flex;
+    padding: 9.5px 10px;
+    align-items: center;
+    gap: 12px;
+    align-self: stretch;
+    border: 1px solid #6D6D6D;
+    border-radius: 4px;
+  }
+
+
 
 .lists {
     display: flex;
@@ -249,6 +273,10 @@ p {
     border: 1px solid #6D6D6D;
     border-radius: 4px;
 
+}
+
+.error-msg {
+    font-size: 14px;
 }
 
 
