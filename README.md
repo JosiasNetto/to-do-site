@@ -31,12 +31,6 @@ Instale as dependências do projeto usando o Bundler:
 * bundle install
 
 3. Configurar o Banco de Dados
-Este projeto utiliza o banco de dados SQLite3 para o ambiente de desenvolvimento. A configuração do banco de dados está no arquivo config/database.yml.example. Antes de prosseguir, renomeie ou copie este arquivo para database.yml:
-
-* cp config/database.yml.example config/database.yml
-Nota: Caso deseje configurar um banco de dados diferente, atualize as credenciais e configurações em config/database.yml conforme necessário.
-
-Em seguida, crie e migre o banco de dados:
 
 * rails db:create
 * rails db:migrate
