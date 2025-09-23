@@ -1,48 +1,102 @@
-# To-Do App
+# To-Do Site (Rails)
 
-Este é um aplicativo web desenvolvido em Ruby on Rails para gerenciar listas de tarefas (to-do lists) e suas respectivas metas. Cada lista de tarefas permite ao usuário adicionar, editar e excluir metas específicas, proporcionando uma experiência de organização intuitiva e eficiente.
+[Leia em Português](./README.pt.md)
 
-## Funcionalidades
-* Criação de múltiplas listas de tarefas.
-* Adição e gestão de metas em cada lista de tarefas.
-* Interface para edição e exclusão de listas e metas.
-* validação de campos obrigatórios para garantir uma experiência do usuário robusta.
+## Overview
+This is a web application developed with **Ruby on Rails** to manage task lists (to-do lists) and their respective goals.  
+Each task list allows users to add, edit, and delete specific goals, providing an intuitive and efficient organizational experience.
 
-## Pré-requisitos
-Para configurar e executar o projeto localmente, é necessário ter instalado:
+---
 
-* Ruby (versão 2.7 ou superior)
-* Ruby on Rails (versão 6 ou superior)
-* Bundler (para gerenciar as dependências Ruby)
-* SQLite3 (para o banco de dados local)
+## ✨ Features
+- Create multiple task lists.  
+- Add and manage goals within each task list.  
+- Edit and delete tasks and goals.  
+- Field validation to ensure data integrity.  
+- Progressive Web App (PWA) support.  
+- Docker support for production deployment.  
 
-## Instalação e Configuração
-Siga as instruções abaixo para instalar, configurar e executar o projeto em seu ambiente local.
+---
 
-1. Clonar o Repositório
-Clone o repositório para o seu diretório local:
+## 🛠️ Tech Stack
+- **Ruby on Rails 7.2**  
+- **SQLite3** (local database)  
+- **Puma** (web server)    
+- **Importmap** for JavaScript dependency management  
 
-``` git clone https://github.com/JosiasNetto/to-do-site.git```
-```cd to-do-site```
+---
 
-2. Instalar Dependências
-Instale as dependências do projeto usando o Bundler:
+## 📂 Project Structure
+```
+app/
+ ├─ controllers/    # Controllers for Todos and Goals
+ ├─ models/         # Models: Todo, Meta
+ ├─ views/          # ERB views for tasks and goals
+ ├─ assets/         # CSS, JS, images
+config/
+ ├─ routes.rb       # Application routes
+ ├─ application.rb  # Main Rails configuration
+```
 
-```bundle install```
+---
 
-3. Configurar o Banco de Dados
+## ⚙️ Installation & Setup
 
-``` rails db:create```
-``` rails db:migrate```
+### Prerequisites
+- Ruby 3.2+  
+- Rails 7+  
+- Bundler  
+- SQLite3  
 
-4. Executar o Servidor Local
-Inicie o servidor Rails para visualizar o projeto em um navegador:
+### Local setup
+```bash
+# Clone the repository
+git clone <repo-url>
+cd to-do-site-main
 
-```rails server```
-* Abra o navegador e acesse http://localhost:3000 para ver o aplicativo.
+# Install dependencies
+bundle install
 
-## Configuração do Ambiente de Desenvolvimento
-O projeto inclui o arquivo .gitignore com exclusões padrões, protegendo informações sensíveis de configuração. Certifique-se de configurar as variáveis de ambiente necessárias (como master.key para Rails Credentials, caso aplicável) e garanta que o projeto está atualizado com as versões especificadas.
+# Create and migrate the database
+bin/rails db:create db:migrate
 
-## Licença
-Este projeto é licenciado sob a Licença MIT - consulte o arquivo LICENSE para mais detalhes.
+# Start the server
+bin/rails server
+```
+
+App available at: [http://localhost:3000](http://localhost:3000)
+
+### Docker setup (production-like)
+```bash
+docker build -t todo-site .
+docker run -d -p 3000:3000 --name todo-site todo-site
+```
+
+---
+
+## 🗺️ Roadmap
+- [ ] User authentication (Devise).  
+- [ ] Integration with Redis for Action Cable.  
+- [ ] Dark mode theme.  
+- [ ] API endpoints (JSON).  
+- [ ] Deployment with Kamal or Fly.io.  
+
+---
+
+## 🤝 Contributing
+Contributions are welcome!  
+1. Fork this repository.  
+2. Create a new branch (`git checkout -b feature-x`).  
+3. Commit your changes.  
+4. Push to your fork and open a Pull Request.  
+
+---
+
+## 📄 License
+MIT License. See [LICENSE](./LICENSE).
+
+---
+
+## 👤 Author
+Developed by **Josias de Hollanda Caldas Netto**  
+[LinkedIn](https://www.linkedin.com/in/josiasnetto) | [GitHub](https://github.com/JosiasNetto) 
